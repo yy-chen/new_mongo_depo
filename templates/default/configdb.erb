@@ -1,0 +1,27 @@
+systemLog:
+    destination: file
+    path: /home/dhcd/mongo/<%=@ParentName%>/<%=@Name%>/log/mongo.log
+    logAppend: true
+    timeStampFormat: iso8601-local
+
+storage:
+    dbPath: /home/dhcd/mongo/<%=@ParentName%>/<%=@Name%>/data
+    directoryPerDB: true
+    engine: wiredTiger
+    wiredTiger:
+        engineConfig:
+            cacheSizeGB: 1
+    journal:
+        enabled: true
+
+
+net:
+    bindIp: <%= @Ip %>
+    port: <%= @Port %>
+
+
+processManagement:
+    fork: true
+
+sharding:
+    clusterRole: configsvr

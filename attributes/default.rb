@@ -1,0 +1,7 @@
+default['mongo']['shard']['config'] = 'shard.erb'
+default['mongo']['mongos']['config'] = 'mongos.erb'
+default['mongo']['configdb']['config'] = 'configdb.erb'
+default['mongo']['standalone']['config'] = 'mongod.erb'
+default['mongo']['primary']['config'] = 'repl.erb'
+default['mongo']['secondary']['config'] = 'repl.erb'
+default['mongo']['hidden']['config'] = 'repl.erb'

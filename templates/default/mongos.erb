@@ -1,0 +1,17 @@
+systemLog:
+    destination: file
+    path: /home/dhcd/mongo/<%=@ParentName%>/<%=@Name%>/log/mongo.log
+    logAppend: true
+    timeStampFormat: iso8601-local
+    
+net:
+    bindIp: <%=@Ip%>
+    port: <%=@Port%>
+
+
+processManagement:
+    fork: true
+
+sharding:
+    configDB: <%=@configdbs%>
+    chunkSize: 64
